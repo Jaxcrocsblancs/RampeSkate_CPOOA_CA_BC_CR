@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+class Cours{
+  std::string nom;
+  std::string dateInscriptionFin;
+  int maxPersonne;
+  /* Eleve[maxPersonne] tabEleve;
+  ArrayList<Eleve> listeAttenteEleve;
+  Enseignant prof;
+  ArrayList<Ressources> listeRessources;*/
+
+public:
+  void initCours (std::string nomCours, std::string dateFin, int nbMax){
+    nom = nomCours;
+    dateInscriptionFin = dateFin;
+    maxPersonne = nbMax;
+  }
+  
+  std::string getNom(){
+    return nom;
+  }
+  
+ std::string getDateInscriptionFin(){
+    return dateInscriptionFin;
+  }
+
+  int getNbMax(){
+    return maxPersonne;
+  }
+};
+
+int main()
+{
+  Cours c;
+  std::string nom= "fr";
+  std::string date="10/10/10";
+  c.initCours(nom,date, 10);
+  std::cout << c.getNom() << " "<< c.getDateInscriptionFin() << " " << c.getNbMax() << std::endl;
+  
+  return 0;
+}
